@@ -31,13 +31,13 @@ def wake_up_time():
     '''alarm wake up time.'''
     time = input('when would you like to wake up? eg 6:45, 10:30 ')
     if len(time) == 4: # grabbing single digit hours before :
-        hour = time[0]
+        hour = int(time[0])
         assert  int(time[0]) < 0, 'time < 1'
         print(hour)
     elif len(time) == 5: # grabbing double digit hours before :
-        hour = time[0:2]
-        assert time[0:2] > 12, ' time > 12'
-    minutes = time[3:6]
+        hour = int(time[0:2])
+        assert int(time[0:2]) > 12, ' time > 12'
+    minutes = int(time[3:6])
 
 
 
