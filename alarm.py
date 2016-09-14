@@ -27,19 +27,23 @@ def minute():
    #minute from datetime 0 to 60
     return minute
 
-h = hour()
-m = minute()
+
 
 def wake_up_time(h, m):
     '''alarm wake up time.'''
     time = input('when would you like to wake up? eg 6:45, 10:30 ')
     if len(time) == 4: # grabbing single digit hours before :
         hour = int(time[0])
-        assert  int(time[0]) < 0, 'time < 1'
-        print(hour)
+        assert  int(time[0]) > 0, 'time < 1'
     elif len(time) == 5: # grabbing double digit hours before :
         hour = int(time[0:2])
-        assert int(time[0:2]) > 12, ' time > 12'
+        assert int(time[0:2]) < 13, ' time < 12'
     minutes = int(time[3:6])
 
-    wake_up = strftime('%I + : + %M', t % h, m)
+    #wake_up = time.strftime('%I + : + %M', t % h, m)
+
+
+
+h = hour()
+m = minute()
+wake_up_time(h,m)
