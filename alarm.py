@@ -18,7 +18,7 @@ def hour():
 
     else:
         time = hours
-        assert hours > 12, 'get time hour no sub needs fix'
+        assert hours <= 12, 'get time hour no sub needs fix'
 
     return  time
 
@@ -27,7 +27,10 @@ def minute():
    #minute from datetime 0 to 60
     return minute
 
-def wake_up_time():
+h = hour()
+m = minute()
+
+def wake_up_time(h, m):
     '''alarm wake up time.'''
     time = input('when would you like to wake up? eg 6:45, 10:30 ')
     if len(time) == 4: # grabbing single digit hours before :
@@ -39,17 +42,4 @@ def wake_up_time():
         assert int(time[0:2]) > 12, ' time > 12'
     minutes = int(time[3:6])
 
-
-
-
-
-
-
-
-
-
-
-h = hour()
-print(str(h))
-m = minute()
-wake = wake_up_time()
+    wake_up = strftime('%I + : + %M', t % h, m)
