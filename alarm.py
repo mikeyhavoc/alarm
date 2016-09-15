@@ -12,7 +12,7 @@ def hour():
     if (hour > 12):
 
         time =  hours - 12
-        assert hours > 12, 'get time hour subtraction needs fix'
+        assert hours > 12, 'get time hour subtraction needs adjustment'
 
     else:
         time = hours
