@@ -1,5 +1,6 @@
 import datetime, time, webbrowser
 
+
 def hour():
     '''hour - gets the hour from datetime,
       24 clock if (hour > 12) - 12 hours  =  time
@@ -11,19 +12,21 @@ def hour():
     hours = hour
     if (hour > 12):
 
-        time =  hours - 12
+        time = hours - 12
         assert hours > 12, 'get time hour subtraction needs adjustment'
 
     else:
         time = hours
         assert hours <= 12, 'get time hour no sub needs fix'
 
-    return  time
+    return time
+
 
 def minute():
     minute = datetime.datetime.now().minute
-   #minute from datetime 0 to 60
+    # minute from datetime 0 to 60
     return minute
+
 
 def wake_up_time():
     '''alarm wake up time.
@@ -37,9 +40,3 @@ def wake_up_time():
 
 
 time = wake_up_time()
-
-
-
-
-
-
