@@ -7,8 +7,8 @@ def hour():
       return  time. '''
     hour = datetime.datetime.now().hour
 
+    assert isinstance(hour, object)
     hours = hour
-    time = hours
     if (hour > 12):
 
         time =  hours - 12
@@ -27,30 +27,13 @@ def minute():
 
 def wake_up_time():
     '''alarm wake up time.'''
-    h = 0
-    m = 0
-    time = input('when would you like to wake up? eg 6:45, 10:30 ')
-    if len(time) == 5: # grabbing single digit hours before :
-        hour = int(time[0:1])
-        hour = h
-        assert  int(time[0:1]) > 0, 'time < 1'
-    if len(time) == 4: #grabbing double digit for minutes if hours single
-        minutes = int(time[2:5])
-        m = minutes
-    elif len(time) == 6 : # grabbing double digit hours before :
-        hour = int(time[1:3])
-        h = hour
-    assert int(time[0:2]) < 13, ' time < 12'
-    else:
-        minutes = int(time[3:6])
-         m = minutes
-    return '%d : %d ' %(h, m)
+    alarm_time = input('time you want to wake up please: e.g 6:45, 10:30 ')
 
-#def time_to_wake_up
+    return alarm_time
 
 
 
-#h = hour()
-#m = minute()
-time = wake_up_time()
-print(time)
+
+
+
+
