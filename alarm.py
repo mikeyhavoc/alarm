@@ -26,11 +26,17 @@ def minute():
     return minute
 
 def wake_up_time():
-    '''alarm wake up time.'''
+    '''alarm wake up time.
+    refactor later
+    while loop
+    check for digits 3 digits and : OR
+    4 digits and : '''
     alarm_time = input('time you want to wake up please: e.g 6:45, 10:30 ')
 
     return alarm_time
 
+
+time = wake_up_time()
 
 
 
